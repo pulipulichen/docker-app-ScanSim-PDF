@@ -13,7 +13,7 @@ let processSinglePDF = async function (file) {
     filenameNoExt = filenameNoExt.slice(0, -4)
   }
 
-  let cacheFolder = `/output/${filenameNoExt}`
+  let cacheFolder = `/cache/${filenameNoExt}`
   console.log({cacheFolder})
   if (fs.existsSync(cacheFolder)) {
     await ShellExec(`rm -fr ${cacheFolder}`)
@@ -30,6 +30,12 @@ let processSinglePDF = async function (file) {
   catch (e) {
     console.error(e)
   }
+
+  try {
+    await ShellExec(`img2pdf -h`)
+  }
+  catch (e) {
+    c
 
   // --------------------------------
 
