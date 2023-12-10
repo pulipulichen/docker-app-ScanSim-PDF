@@ -16,8 +16,7 @@ let processSinglePDF = async function (file) {
   let cacheFolder = `/cache/${filenameNoExt}`
   console.log({cacheFolder})
   if (fs.existsSync(cacheFolder)) {
-    await ShellExec(`rm -rf ${cacheFolder}/*`)
-    console.log(await ShellExec(`ls ${cacheFolder}/*`))
+    await ShellExec(`rm -rf "${cacheFolder}"`)
   }
   fs.mkdirSync(cacheFolder, {recursive: true})
 
