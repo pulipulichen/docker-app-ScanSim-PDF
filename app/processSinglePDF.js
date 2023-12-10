@@ -35,7 +35,9 @@ let processSinglePDF = async function (file) {
     await ShellExec(`img2pdf -h`)
   }
   catch (e) {
-    c
+    console.error(e)
+  }
+    
 
   // --------------------------------
 
