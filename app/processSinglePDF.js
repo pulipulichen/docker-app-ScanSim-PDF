@@ -31,7 +31,7 @@ let processSinglePDF = async function (file) {
   // --------------------------------
 
   try {
-    await ShellExec(`convert "/cache/${filenameNoExt}*.png" /output/${filenameNoExt}-images.pdf`)
+    await ShellExec(`convert "/cache/${filenameNoExt}"*.png /output/${filenameNoExt}-images.pdf`)
   }
   catch (e) {
     console.error(e)
