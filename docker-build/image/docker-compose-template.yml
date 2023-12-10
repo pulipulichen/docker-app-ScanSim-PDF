@@ -1,11 +1,11 @@
 version: "3"
 services:
   app:
-    image: pudding/docker-app:docker-app-document-images-extractor-app-20231210.235033
+    image: pudding/docker-app:docker-app-document-to-image-only-pdf-app-20231210.235411
     tty: true
     command: node /app/index.js "/input/__INPUT__"
     environment:
-      - CONTAINER_NAME=docker-app-document-images-extractor-app
+      - CONTAINER_NAME=docker-app-document-to-image-only-pdf-app
       - LOCAL_VOLUMN_PATH=/input/
       - RUN_COMMAND=node /app/index.js
     volumes: 

@@ -1,4 +1,4 @@
-FROM pudding/docker-app:docker-app-pdf-to-crop-svg-app-20231111.200031
+FROM pudding/docker-app:node-18-7z-20230521
 
 RUN apt-get update --fix-missing
 
