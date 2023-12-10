@@ -13,10 +13,10 @@ let processSinglePDF = async function (file) {
     filenameNoExt = filenameNoExt.slice(0, -4)
   }
 
-  let cacheFolder = `/output/${filenameNoExt}`
+  let cacheFolder = `/cache/${filenameNoExt}`
   console.log({cacheFolder})
   if (fs.existsSync(cacheFolder)) {
-    await ShellExec(`rm -fr ${cacheFolder}`)
+    await ShellExec(`rm -rf ${cacheFolder}`)
   }
   fs.mkdirSync(cacheFolder, {recursive: true})
 
