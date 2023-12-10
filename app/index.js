@@ -23,17 +23,6 @@ let main = async function () {
     let file = files[i]
     await processDocument(file, processDocument)
   }
-
-  if (isColab) {
-    let output7z = '/output/output.7z'
-    if (fs.existsSync(output7z)) {
-      fs.unlinkSync(output7z)
-    }
-    await ShellSpawn(`mv /output/*/* /output/`)
-    await ShellSpawn(`find /output/ -depth -type d -empty -exec rmdir {} +`)
-    await ShellSpawn(`find /output/ -depth -type d -empty -exec rmdir {} +`)
-    await ShellSpawn(`find /output/ -type f -name '*' -exec 7z a -r -mx=9 "${output7z}" {} +`)
-  }
 }
 
 main()
