@@ -19,7 +19,7 @@ let processSinglePDF = async function (file) {
 
   let result
 
-  let cmd = `pdftoppm "${file}" "/cache/${filenameNoExt}" -png`
+  let cmd = `pdftoppm "${file}" "/cache/${filenameNoExt}/${filenameNoExt}" -png`
   console.log(cmd)
   try {
     result = await ShellExec(cmd)
