@@ -2,8 +2,7 @@ const isDirectory = require('./lib/isDirectory')
 
 const processDir = require('./processDir')
 const processSinglePDF = require('./processSinglePDF')
-const processSingleODF = require('./processSingleODF')
-const processSingleOffice = require('./processSingleOffice')
+const processSingleNonPDF = require('./processSingleNonPDF')
 
 const path = require('path')
 
@@ -15,10 +14,10 @@ let processDocument = async function (file, checkDir = true) {
     await processSinglePDF(file)
   }
   else if (file.endsWith('.odt') || file.endsWith('.ods') || file.endsWith('.odp') || file.endsWith('.odg')) {
-    await processSingleODF(file)
+    await processSingleNonPDF(file)
   }
   else if (file.endsWith('.docx') || file.endsWith('.xlsx') || file.endsWith('.pptx') || file.endsWith('.odg')) {
-    await processSingleOffice(file)
+    await processSingleNonPDF(file)
   }
 }
 
