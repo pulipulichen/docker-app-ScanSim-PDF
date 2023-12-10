@@ -12,7 +12,9 @@ RUN apt-get install -y \
     poppler-utils imagemagick ghostscript
 
 RUN apt-get install -y \
-    img2pdf
+    python3 python3-pip
+
+RUN pip3 install img2pdf
 
 # COPY package.json /
 # RUN npm install
