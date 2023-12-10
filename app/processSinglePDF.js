@@ -33,7 +33,7 @@ let processSinglePDF = async function (file) {
 
   // --------------------------------
 
-  let convertCmd = `convert "/cache/${filenameNoExt}"*.png "/output/${filenameNoExt}-images.pdf"`
+  let convertCmd = `convert "/cache/${filenameNoExt}/${filenameNoExt}"*.png "/output/${filenameNoExt}-images.pdf"`
   try {
     await ShellExec(convertCmd)
   }
