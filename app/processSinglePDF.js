@@ -43,7 +43,7 @@ let processSinglePDF = async function (file) {
 
   // --------------------------------
 
-  prependFilenameInFolder(filenameNoExt, outputFolder)
+  // prependFilenameInFolder(filenameNoExt, outputFolder)
 
   // if (isColab) {
   //   await ShellSpawn(`cd "${outputFolder}"; zip -r ../"${filenameNoExt}.zip" . -i *`)
