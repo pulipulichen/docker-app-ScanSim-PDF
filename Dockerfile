@@ -1,4 +1,4 @@
-FROM pudding/docker-app:node-18-7z-20230521
+FROM pudding/docker-app:docker-app-pdf-to-crop-svg-app-20231111.200031
 
 RUN apt-get update --fix-missing
 
@@ -10,11 +10,6 @@ RUN apt-get install -y \
 
 RUN apt-get install -y \
     poppler-utils imagemagick ghostscript
-
-RUN apt-get install -y \
-    python3 python3-pip
-
-RUN pip3 install img2pdf
 
 # COPY package.json /
 # RUN npm install
