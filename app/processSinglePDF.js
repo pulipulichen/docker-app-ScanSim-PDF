@@ -13,7 +13,7 @@ let processSinglePDF = async function (file) {
     filenameNoExt = filenameNoExt.slice(0, -4)
   }
 
-  let outputFolder = `/cache/${filenameNoExt}/`
+  let outputFolder = `/output/${filenameNoExt}/`
   console.log({outputFolder})
   if (fs.existsSync(outputFolder)) {
     await ShellExec(`rm -fr ${outputFolder}`)
@@ -22,7 +22,7 @@ let processSinglePDF = async function (file) {
 
   let result
 
-  let cmd = `pdftoppm "${file}" "/cache/${filenameNoExt}/${filenameNoExt}" -png`
+  let cmd = `pdftoppm "${file}" "/${outputFolder}/${filenameNoExt}" -png`
   console.log(cmd)
   try {
     result = await ShellExec(cmd)
@@ -33,7 +33,7 @@ let processSinglePDF = async function (file) {
 
   // --------------------------------
 
-  let convertCmd = `convert "/cache/${filenameNoExt}/${filenameNoExt}"*.png "/output/${filenameNoExt}-images.pdf"`
+  let convertCmd = `convert "/${outputFolder}/${filenameNoExt}"*.png "/output/${filenameNoExt}-images.pdf"`
   try {
     await ShellExec(convertCmd)
   }
