@@ -32,7 +32,7 @@ let processSinglePDF = async function (file) {
   }
 
   try {
-    await ShellExec(`img2pdf -h`)
+    await ShellExec(`/usr/bin/img2pdf -h`)
   }
   catch (e) {
     console.error(e)
@@ -41,7 +41,7 @@ let processSinglePDF = async function (file) {
 
   // --------------------------------
 
-  let convertCmd = `img2pdf "${cacheFolder}/${filenameNoExt}"*.png -o "/output/${filenameNoExt}-images.pdf"`
+  let convertCmd = `/usr/bin/img2pdf "${cacheFolder}/${filenameNoExt}"*.png -o "/output/${filenameNoExt}-images.pdf"`
   try {
     await ShellExec(convertCmd)
   }
