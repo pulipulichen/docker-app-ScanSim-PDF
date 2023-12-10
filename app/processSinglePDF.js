@@ -13,35 +13,27 @@ let processSinglePDF = async function (file) {
     filenameNoExt = filenameNoExt.slice(0, -4)
   }
 
-  let cacheFolder = `/cache/${filenameNoExt}`
+  let cacheFolder = `/output/${filenameNoExt}`
   console.log({cacheFolder})
   if (fs.existsSync(cacheFolder)) {
     await ShellExec(`rm -fr ${cacheFolder}`)
   }
   fs.mkdirSync(cacheFolder, {recursive: true})
 
-  let result
+  // ----------------------------------------------------------------
 
   let cmd = `pdftoppm "${file}" "${cacheFolder}/${filenameNoExt}" -png`
   console.log(cmd)
   try {
-    result = await ShellExec(cmd)
+    await ShellExec(cmd)
   }
   catch (e) {
     console.error(e)
   }
-
-  try {
-    await ShellExec(`/usr/bin/img2pdf -h`)
-  }
-  catch (e) {
-    console.error(e)
-  }
-    
 
   // --------------------------------
 
-  let convertCmd = `/usr/bin/img2pdf "${cacheFolder}/${filenameNoExt}"*.png -o "/output/${filenameNoExt}-images.pdf"`
+  let convertCmd = `img2pdf "${cacheFolder}/${filenameNoExt}"*.png -o "/output/${filenameNoExt}-images.pdf"`
   try {
     await ShellExec(convertCmd)
   }
