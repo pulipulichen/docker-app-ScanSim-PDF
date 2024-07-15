@@ -1,7 +1,7 @@
 {
   "name": "docker-app-Document-to-Image-Only-PDF",
   "version": "1.0.0",
-  "description": "To extract the bookmarks in a PDF file.",
+  "description": "To simulate the process of printing an electronic document and then scanning it back into a PDF.",
   "main": "index.js",
   "scripts": {
     "start": "docker-compose up",

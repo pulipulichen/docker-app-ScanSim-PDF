@@ -8,7 +8,7 @@ authors:
 title: "docker-app-Document-to-Image-Only-PDF"
 license: "MIT"
 repository-code: "https://github.com/pulipulichen/docker-app-Document-to-Image-Only-PDF"
-abstract: "To extract the bookmarks in a PDF file."
+abstract: "To simulate the process of printing an electronic document and then scanning it back into a PDF."
 identifiers:
   - type: doi
     value: 10.5281/zenodo.12741712
