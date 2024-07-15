@@ -37,7 +37,7 @@ let processSinglePDF = async function (file) {
 
   // --------------------------------
 
-  let convertCmd = `img2pdf "${cacheFolder}/${filenameNoExt}"*.png -o "/output/${filenameNoExt}-images.pdf"`
+  let convertCmd = `img2pdf "${cacheFolder}/${filenameNoExt}"*.png -o "/output/${filenameNoExt}-scanned.pdf"`
   try {
     await ShellExec(convertCmd)
   }
