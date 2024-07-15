@@ -30,6 +30,7 @@
     "url": "https://github.com/pulipulichen/docker-app-Document-to-Image-Only-PDF/issues"
   },
   "homepage": "https://github.com/pulipulichen/docker-app-Document-to-Image-Only-PDF#readme",
+  "doi": "10.5281/zenodo.12741712",
   "devDependencies": {
   },
   "dependencies": {

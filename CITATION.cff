@@ -9,3 +9,6 @@ title: "docker-app-Document-to-Image-Only-PDF"
 license: "MIT"
 repository-code: "https://github.com/pulipulichen/docker-app-Document-to-Image-Only-PDF"
 abstract: "To extract the bookmarks in a PDF file."
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.12741712

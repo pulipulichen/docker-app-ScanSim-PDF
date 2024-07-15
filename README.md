@@ -1,4 +1,4 @@
-@TODO DOI
+[![DOI](https://zenodo.org/badge/729853230.svg)](https://zenodo.org/doi/10.5281/zenodo.12741712)
 
 # docker-app-Document-to-Image-Only-PDF: 將文件轉換成純圖片的PDF
 
