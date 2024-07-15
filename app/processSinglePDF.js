@@ -32,6 +32,10 @@ let processSinglePDF = async function (file) {
   }
 
   // --------------------------------
+  // 稍微將圖片轉個角度吧
+  await rotateImages(cacheFolder)
+
+  // --------------------------------
 
   let convertCmd = `img2pdf "${cacheFolder}/${filenameNoExt}"*.png -o "/output/${filenameNoExt}-images.pdf"`
   try {
@@ -48,6 +52,28 @@ let processSinglePDF = async function (file) {
   // if (isColab) {
   //   await ShellSpawn(`cd "${outputFolder}"; zip -r ../"${filenameNoExt}.zip" . -i *`)
   // }
+}
+
+function getRandomAngle() {
+  return (Math.random() * 2 - 1).toFixed(2);  // Random number between -1 and 1
+}
+
+async function rotateImages (imageDir) {
+  // Read all files in the directory synchronously
+  const files = fs.readdirSync(imageDir);
+
+  // Filter to include only .png files
+  const pngFiles = files.filter(file => path.extname(file).toLowerCase() === '.png');
+
+  for (let i = 0; i < pngFiles.length; i++) {
+    let file = pngFiles[i]
+
+    const filePath = path.join(imageDir, file);
+    const angle = getRandomAngle();
+
+    let command = `convert "${filePath}" -rotate "${angle}" "${filePath}"`
+    await ShellExec(command)
+  }
 }
 
 module.exports = processSinglePDF
