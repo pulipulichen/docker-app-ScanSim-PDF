@@ -55,7 +55,7 @@ let processSinglePDF = async function (file) {
 }
 
 function getRandomAngle() {
-  return (Math.random() * 2 - 1).toFixed(2);  // Random number between -1 and 1
+  return (Math.random() - 0.5).toFixed(2);  // Random number between -1 and 1
 }
 
 async function rotateImages (imageDir) {
