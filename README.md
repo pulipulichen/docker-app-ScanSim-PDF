@@ -25,4 +25,4 @@ The purpose of this Docker app is to simulate the process of printing an electro
 
 # Citation
 
-@TODO
+Chen, Y.-T. (2024). *Docker-app-Document-to-Image-Only-PDF* (20240715.141627) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.12741712](https://doi.org/10.5281/ZENODO.12741712)
