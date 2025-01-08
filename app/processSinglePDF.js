@@ -74,7 +74,10 @@ async function rotateImages (imageDir) {
     let command = `convert "${filePath}" -rotate "${angle}" "${filePath}"`
     await ShellExec(command)
 
-    command = `convert "${filePath}" ( -evaluate AddNoise Gaussian ) ( -size 100x1 gradient:gray50-gray80 -resize x2000! ) -compose Multiply -composite "${filePath}"`
+    command = `convert "${filePath}" -evaluate AddNoise Gaussian "${filePath}"`
+    await ShellExec(command)
+
+    command = `convert "${filePath}" \\( -size 100x1 gradient:gray50-gray80 -resize x2000! \\) -compose Multiply -composite "${filePath}"`
     await ShellExec(command)
   }
 }
