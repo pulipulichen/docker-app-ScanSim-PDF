@@ -71,10 +71,12 @@ async function rotateImages (imageDir) {
     const filePath = path.join(imageDir, file);
     const angle = getRandomAngle();
 
-    let command = `convert "${filePath}" -rotate "${angle}" "${filePath}"`
+    let command
+
+    command = `convert "${filePath}" \\( -edge 1 -noise 5 \\) -compose Overlay -composite \ "${filePath}"`
     await ShellExec(command)
 
-    command = `convert "${filePath}" -noise 1 "${filePath}"`
+    command = `convert "${filePath}" -rotate "${angle}" "${filePath}"`
     await ShellExec(command)
 
     // command = `convert "${filePath}" \\( -size 100x1 gradient:gray50-gray80 -resize x2000! \\) -compose Multiply -composite "${filePath}"`
