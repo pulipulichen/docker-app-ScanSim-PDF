@@ -4,7 +4,7 @@
 #include <WinAPIFiles.au3>
 #include <Array.au3>
 
-Global $sPROJECT_NAME = "docker-app-Document-to-Image-Only-PDF"
+Global $sPROJECT_NAME = "docker-app-ScanSim-PDF"
 
 ; =================================================================
 

@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/729853230.svg)](https://zenodo.org/doi/10.5281/zenodo.12741712)
 
-# docker-app-Document-to-Image-Only-PDF: 將文件轉換成純圖片的PDF
+# ScanSim PDF: 將數位PDF轉換成模仿掃描的PDF
 
 The purpose of this Docker app is to simulate the process of printing an electronic document and then scanning it back into a PDF. The method involves converting any document into image files, slightly rotating them, and then combining them into a PDF file. The resulting PDF cannot have its text selected and is intentionally presented with a slightly rough appearance.
 
@@ -25,4 +25,4 @@ The purpose of this Docker app is to simulate the process of printing an electro
 
 # Citation
 
-Chen, Y.-T. (2024). *Docker-app-Document-to-Image-Only-PDF* (20240715.141627) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.12741712](https://doi.org/10.5281/ZENODO.12741712)
+Chen, Y.-T. (2024). *ScanSim PDF* (20240715.141627) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.12741712](https://doi.org/10.5281/ZENODO.12741712)

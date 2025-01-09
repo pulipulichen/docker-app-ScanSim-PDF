@@ -3,7 +3,7 @@
 # cd /tmp/docker-app-Image-Trim/
 # /tmp/docker-app-Image-Trim/s.sh
 
-PROJECT_NAME=docker-app-Document-to-Image-Only-PDF
+PROJECT_NAME=docker-app-ScanSim-PDF
 
 # =================================================================
 
