@@ -10,18 +10,18 @@ The purpose of this Docker app is to simulate the process of printing an electro
 
 # Download
 
-- For Windows: https://pulipulichen.github.io/docker-app-Document-to-Image-Only-PDF/bin/doc2image-pdf.exe
-- For Linux and Mac OS: https://pulipulichen.github.io/docker-app-Document-to-Image-Only-PDF/bin/doc2image-pdf.sh
+- For Windows: https://pulipulichen.github.io/docker-app-ScanSim-PDF/bin/doc2image-pdf.exe
+- For Linux and Mac OS: https://pulipulichen.github.io/docker-app-ScanSim-PDF/bin/doc2image-pdf.sh
 
 # Online Tool
 
-- Colab: https://colab.research.google.com/github/pulipulichen/docker-app-Document-to-Image-Only-PDF/blob/main/colab/docker_app_Document_to_Image_Only_PDF.ipynb
+- Colab: https://colab.research.google.com/github/pulipulichen/docker-app-ScanSim-PDF/blob/main/colab/docker_app_Document_to_Image_Only_PDF.ipynb
 
 # Key Technologies
 
-- Docker
-- PDF
-- ImageMagick
+- **Docker**: 以容器化部署，確保應用程式具備可移植性和管理便利性。
+- **ImageMagick**: 圖片處理。
+- **qpdf**: PDF檔案處理。
 
 # Citation
 
