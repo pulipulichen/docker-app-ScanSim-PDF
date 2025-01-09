@@ -15,7 +15,7 @@ The purpose of this Docker app is to simulate the process of printing an electro
 
 # Online Tool
 
-- Colab: https://colab.research.google.com/github/pulipulichen/docker-app-ScanSim-PDF/blob/main/colab/docker_app_Document_to_Image_Only_PDF.ipynb
+- Colab: https://colab.research.google.com/github/pulipulichen/docker-app-ScanSim-PDF/blob/main/colab/docker-app-ScanSim-PDF.ipynb
 
 # Key Technologies
 
