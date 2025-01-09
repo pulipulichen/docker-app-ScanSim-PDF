@@ -10,8 +10,8 @@ The purpose of this Docker app is to simulate the process of printing an electro
 
 # Download
 
-- For Windows: https://pulipulichen.github.io/docker-app-ScanSim-PDF/bin/doc2image-pdf.exe
-- For Linux and Mac OS: https://pulipulichen.github.io/docker-app-ScanSim-PDF/bin/doc2image-pdf.sh
+- For Windows: https://pulipulichen.github.io/docker-app-ScanSim-PDF/bin/scansim-pdf.exe
+- For Linux and Mac OS: https://pulipulichen.github.io/docker-app-ScanSim-PDF/bin/scansim-pdf.sh
 
 # Online Tool
 
@@ -25,4 +25,4 @@ The purpose of this Docker app is to simulate the process of printing an electro
 
 # Citation
 
-Chen, Y.-T. (2024). *ScanSim PDF* (20240715.141627) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.12741712](https://doi.org/10.5281/ZENODO.12741712)
+Chen, Y.-T. (2025). *ScanSim PDF* (20250109.082926) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.12741712](https://doi.org/10.5281/ZENODO.12741712)
